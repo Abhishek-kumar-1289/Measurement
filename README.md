@@ -1,7 +1,7 @@
 ## Introduction
 
 
-<b>Discipline | <b>Mini project
+<b>Discipline | <b> IT
 :--|:--|
 <b> Lab | <b>Virtual lab
 <b> Experiment|     <b> Measurement of attenuation and bending losses in single mode vs multi mode fibres
