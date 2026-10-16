@@ -1,6 +1,11 @@
 ## Introduction
+<<<<<<< HEAD
+## It is DEV branch
+=======
+## Abhi Anuragi
+## Tapesh Nandan
 
-
+>>>>>>> 346154b7784a8c91e1f6d9f9ecc39ebcc05bf177
 <b>Discipline | <b> IT
 :--|:--|
 <b> Lab | <b>Virtual lab
