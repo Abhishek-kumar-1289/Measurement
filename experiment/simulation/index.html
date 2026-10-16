@@ -1,13 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+    <title>Optical Fiber Virtual Lab</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<body>
+        <div class="virtual-lab">
+        <h1>Optical Fiber Virtual Lab</h1>
+        <p class="subtitle">
+            Measurement of Attenuation and Bending Losses
+        </p>
+        <div class="experiment-box">
+            <h2>Attenuation Experiment</h2>
+            <label>Select Fiber:</label>
+            <select id="fiber">
+                <option value="single">Single Mode Fiber</option>
+                <option value="multi">Multimode Fiber</option>
+            </select>
+            <label>Fiber Length (km):</label>
+            <input type="number" id="length" value="5">
+            <label>Input Power (mW):</label>
+            <input type="number" id="inputPower" value="6">
+            <label>Output Power (mW):</label>
+            <input type="number" id="outputPower" value="0.5">
+            <button onclick="calculateAttenuation()">
+                Measure Attenuation
+            </button>
+            <div class="result-box">
+                <h3>Attenuation Result</h3>
+                <p id="attenuationResult">
+                    Result will appear here
+                </p>
+            </div>
+        </div>
+
+        <div class="experiment-box">
+            <h2>Bending Loss Experiment</h2>
+            <label>Bend Radius (mm):</label>
+            <input type="number" id="radius" value="30">
+            <label>Straight Fiber Power (mW):</label>
+            <input type="number" id="straightPower" value="5">
+            <label>Bent Fiber Power (mW):</label>
+            <input type="number" id="bentPower" value="4">
+            <button onclick="calculateBendingLoss()">
+                Measure Bending Loss
+            </button>
+        </div>
+
+            <div class="result-box">
+                <h3>Bending Loss Result</h3>
+                <p id="bendingResult">
+                    Result will appear here
+                </p>
+            </div>
+        </div>
+
+        <div class="experiment-box">
+            <h2>Single Mode vs Multimode Fiber</h2>
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Single Mode Fiber</th>
+                    <th>Multimode Fiber</th>
+                </tr>
+                <tr>
+                    <td>Core Size</td>
+                    <td>8–10 µm</td>
+                    <td>50–62.5 µm</td>
+                </tr>
+                <tr>
+                    <td>Number of Modes</td>
+                    <td>One</td>
+                    <td>Many</td>
+                </tr>
+                <tr>
+                    <td>Dispersion</td>
+                    <td>Low</td>
+                    <td>Higher</td>
+                </tr>
+                <tr>
+                    <td>Distance</td>
+                    <td>Long Distance</td>
+                    <td>Short Distance</td>
+                </tr>
+                <tr>
+                    <td>Applications</td>
+                    <td>Telecommunication</td>
+                    <td>LAN / Data Center</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="experiment-box">
+            <h2>Formulas</h2>
+            <p>
+                <b>Attenuation:</b>
+            </p>
+            <p class="formula">
+                α = (10 / L) log₁₀(Pin / Pout)
+            </p>
+            <p>
+                <b>Bending Loss:</b>
+            </p>
+            <p class="formula">
+                Lb = 10 log₁₀(Pstraight / Pbent)
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>
+                Optical Fiber Communication Virtual Laboratory
+            </p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
